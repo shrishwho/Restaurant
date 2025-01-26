@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            background-size: cover;
+            background-image:url(https://j6e2i8c9.rocketcdn.me/wp-content/uploads/2015/04/chicken_tandoori_recipe_3.jpg);
+            background-repeat:no-repeat ;
+            background-position: center;
+            background-attachment: fixed ;
+            
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurant Order Form</h1>
+    <form action="submit-order.php" method="POST">
+        <!-- Customer Name -->
+        <label for="customer-name">Your Name:</label>
+        <input type="text" id="customer-name" name="customer_name" placeholder="Enter your name" required>
+
+        <!-- Table Number -->
+        <label for="table-number">Table Number:</label>
+        <input type="number" id="table-number" name="table_number" placeholder="Enter your table number" min="1" required>
+
+        <!-- Menu Items -->
+        <label for="menu-item">Select Your Dish:</label>
+        <select id="menu-item" name="menu_item" required>
+            <option value="">-- Select a Dish --</option>
+            <option value="Chicken dum biryani">CHICKEN DUM BIRYANI </option>
+            <option value="Chicken Chilli">CHICKEN CHILLI</option>
+            <option value="Chicken kabab">CHICKEN KABAB</option>
+            <option value="Chicken Roll">CHICKEN ROLL </option>
+            <option value="Chicken momos">CHICKEN MOMOS</option>
+            <option value="Chicken 65">CHICKEN 65</option>
+            <option value="Muttton Biryani">MUTTON BIRYANI</option>
+            <option value="Mutton kheema">MUTTON KHEEMA</option>
+            <option value="Mutton curry">MUTTON CURRY</option>
+            <option value="Fish cury">FISH CURY</option>
+            <option value="Fish Chilli">FISH CHIILI</option>
+            <option value="Fish dry">FISH FRY</option>
+        </select>
+
+        <!-- Quantity -->
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" required>
+
+        <!-- Additional Requests -->
+        <label for="requests">Special Requests:</label>
+        <textarea id="requests" name="special_requests" rows="4" placeholder="Enter any special requests (e.g., extra spicy, no onions)"></textarea>
+
+        <!-- Contact Information -->
+        <label for="contact">Phone Number:</label>
+        <input type="tel" id="contact" name="contact" placeholder="Enter your phone number">
+
+        <!-- Submit Button -->
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>
